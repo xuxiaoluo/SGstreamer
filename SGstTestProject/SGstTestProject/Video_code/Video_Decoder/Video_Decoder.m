@@ -78,6 +78,7 @@
     decoder = gst_element_factory_make("avdec_h264", NULL);
 
     
+    
 //     写本地360文件
     write_file= gst_element_factory_make("filesink", NULL);
     g_object_set(G_OBJECT(write_file), "append",true, nil);
