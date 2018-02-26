@@ -12,7 +12,6 @@
 
 -(instancetype)init;
 -(void)DecoderLocalFile:(NSString *)local_file;
-
 -(void)start_decode;
 -(void)stop_decode;
 @end
