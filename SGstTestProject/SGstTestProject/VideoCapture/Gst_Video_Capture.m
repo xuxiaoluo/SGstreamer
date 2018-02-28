@@ -45,8 +45,6 @@ GST_DEBUG_CATEGORY_STATIC (debug_category);
         self->v_view = videoView;
         self->ui_delegate = delegate;
         
-        char *argv ="";
-        gst_init(0, &argv);
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self app_function];
         });
@@ -133,8 +131,8 @@ static void state_changed_cb (GstBus *bus, GstMessage *msg, Gst_Video_Capture *s
     
     pipeline = gst_pipeline_new("pipeline");
     
-    
    input_device  = gst_element_factory_make("avfvideosrc", "v_capture");
+    
     // 指定采集设备 设置采集参数
     g_object_set(G_OBJECT(input_device),"device-index", 0, NULL);
     g_object_set(G_OBJECT(input_device),"position", 0, NULL);
@@ -342,7 +340,7 @@ static void state_changed_cb (GstBus *bus, GstMessage *msg, Gst_Video_Capture *s
         GST_ERROR ("Could not retrieve video sink");
         return;
     }
-//    gst_video_overlay_set_window_handle(GST_VIDEO_OVERLAY(video_sink), (guintptr) (id) v_view);
+    gst_video_overlay_set_window_handle(GST_VIDEO_OVERLAY(video_sink), (guintptr) (id) v_view);
     
     bus = gst_element_get_bus (pipeline);
     bus_source = gst_bus_create_watch (bus);

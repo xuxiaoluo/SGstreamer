@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "VideoCapture.h"
+#include <gst/gst.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
+    char *argv ="";
+    gst_init(0, &argv);
     VideoCapture *v_capt_vc = [[VideoCapture alloc]initWithNibName:@"VideoCapture" bundle:nil];
     v_capt_vc.view.frame = self.window.contentView.bounds;
     [self.window.contentView addSubview:v_capt_vc.view];

@@ -64,7 +64,7 @@
     context = g_main_context_new();
     g_main_context_push_thread_default(context);
 
-    GstElement *file_src,*decoder,*write_file,*encoder_file,*encoder,*write_encoder_file,*decoder_filter,*video_sink,*h264parse,*encode_h264parse;
+    GstElement *file_src,*decoder,*write_file,*encoder_file,*encoder,*write_encoder_file,*decoder_filter,*video_sink,*h264parse,*encode_h264parse,*videoconvert,*osxvideosink;
   
     // 读取本地文件
     file_src = gst_element_factory_make("filesrc", NULL);
@@ -76,7 +76,12 @@
 
     //创建解码器
     decoder = gst_element_factory_make("avdec_h264", NULL);
-
+    
+    //创建视频转换器
+    videoconvert = gst_element_factory_make("videoconvert", NULL);
+    
+    // 显示视频
+    osxvideosink = gst_element_factory_make("osxvideosink", NULL);
     
     
 //     写本地360文件
@@ -84,14 +89,13 @@
     g_object_set(G_OBJECT(write_file), "append",true, nil);
     g_object_set(G_OBJECT(write_file), "location","/Users/sean/Desktop/gst_file/write_360.yuv", nil);
     
-    gst_bin_add_many(GST_BIN(pipeline), file_src,h264parse,decoder,write_file, nil);
-    if (!gst_element_link_many(file_src,h264parse,decoder,write_file, nil)) {
+    gst_bin_add_many(GST_BIN(pipeline), file_src,h264parse,decoder,videoconvert,osxvideosink, nil);
+    if (!gst_element_link_many(file_src,h264parse,decoder,videoconvert,osxvideosink, nil)) {
         NSLog(@"decoder link failed");
     }
     gst_element_set_state(pipeline,GST_STATE_READY);
     
-    
-    
+
     if (error) {
         gchar *message = g_strdup_printf("Unable to build pipeline: %s", error->message);
         g_clear_error (&error);

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1465B0462044EF51000687E0 /* Video_encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1465B0452044EF51000687E0 /* Video_encoder.m */; };
+		1465B04B2044F452000687E0 /* Code_Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1465B04A2044F452000687E0 /* Code_Configure.m */; };
 		1467E2CF20439ED8000D5E54 /* Video_Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467E2CE20439ED8000D5E54 /* Video_Decoder.m */; };
+		1467E2D220443C4E000D5E54 /* Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467E2D120443C4E000D5E54 /* Capture.m */; };
+		1467E2D52044406C000D5E54 /* Video_Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467E2D42044406C000D5E54 /* Video_Scale.m */; };
 		148BA4F32041339E007EE62D /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 148BA4F22041339E007EE62D /* libiconv.2.tbd */; };
-		14FDE9DE203FB2C500FD5322 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14FDE9DD203FB2C500FD5322 /* AppDelegate.mm */; };
+		14FDE9DE203FB2C500FD5322 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FDE9DD203FB2C500FD5322 /* AppDelegate.m */; };
 		14FDE9E0203FB2C500FD5322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FDE9DF203FB2C500FD5322 /* Assets.xcassets */; };
 		14FDE9E3203FB2C500FD5322 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14FDE9E1203FB2C500FD5322 /* MainMenu.xib */; };
 		14FDE9E6203FB2C500FD5322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FDE9E5203FB2C500FD5322 /* main.m */; };
@@ -25,8 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1465B0442044EF51000687E0 /* Video_encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video_encoder.h; sourceTree = "<group>"; };
+		1465B0452044EF51000687E0 /* Video_encoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video_encoder.m; sourceTree = "<group>"; };
+		1465B0492044F452000687E0 /* Code_Configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Code_Configure.h; sourceTree = "<group>"; };
+		1465B04A2044F452000687E0 /* Code_Configure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Code_Configure.m; sourceTree = "<group>"; };
 		1467E2CD20439ED8000D5E54 /* Video_Decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video_Decoder.h; sourceTree = "<group>"; };
 		1467E2CE20439ED8000D5E54 /* Video_Decoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video_Decoder.m; sourceTree = "<group>"; };
+		1467E2D020443C4E000D5E54 /* Capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture.h; sourceTree = "<group>"; };
+		1467E2D120443C4E000D5E54 /* Capture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture.m; sourceTree = "<group>"; };
+		1467E2D32044406C000D5E54 /* Video_Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video_Scale.h; sourceTree = "<group>"; };
+		1467E2D42044406C000D5E54 /* Video_Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video_Scale.m; sourceTree = "<group>"; };
 		148BA03120412FE1007EE62D /* libtheoraenc.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtheoraenc.1.dylib; sourceTree = "<group>"; };
 		148BA03220412FE1007EE62D /* libgmodule-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libgmodule-2.0.dylib"; sourceTree = "<group>"; };
 		148BA03320412FE1007EE62D /* libgmodule-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgmodule-2.0.a"; sourceTree = "<group>"; };
@@ -1222,7 +1234,7 @@
 		148BA4F22041339E007EE62D /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		14FDE9D9203FB2C500FD5322 /* SGstTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGstTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FDE9DC203FB2C500FD5322 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		14FDE9DD203FB2C500FD5322 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		14FDE9DD203FB2C500FD5322 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14FDE9DF203FB2C500FD5322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FDE9E2203FB2C500FD5322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14FDE9E4203FB2C500FD5322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1260,6 +1272,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1465B0482044F445000687E0 /* Code_Configure */ = {
+			isa = PBXGroup;
+			children = (
+				1465B0492044F452000687E0 /* Code_Configure.h */,
+				1465B04A2044F452000687E0 /* Code_Configure.m */,
+			);
+			path = Code_Configure;
+			sourceTree = "<group>";
+		};
 		1467E2CC20439ECD000D5E54 /* Video_Decoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -2694,7 +2715,7 @@
 				14FDE9ED203FB33900FD5322 /* VideoCapture */,
 				14FDE9EE203FB33900FD5322 /* VideoPlayer */,
 				14FDE9DC203FB2C500FD5322 /* AppDelegate.h */,
-				14FDE9DD203FB2C500FD5322 /* AppDelegate.mm */,
+				14FDE9DD203FB2C500FD5322 /* AppDelegate.m */,
 				14FDE9DF203FB2C500FD5322 /* Assets.xcassets */,
 				14FDE9E1203FB2C500FD5322 /* MainMenu.xib */,
 				14FDE9E4203FB2C500FD5322 /* Info.plist */,
@@ -2716,6 +2737,12 @@
 				14FDEA49203FF5E600FD5322 /* V_Capture_Device.m */,
 				14FDEA4D203FF7C000FD5322 /* S_Model.h */,
 				14FDEA4E203FF7C000FD5322 /* S_Model.m */,
+				1467E2D020443C4E000D5E54 /* Capture.h */,
+				1467E2D120443C4E000D5E54 /* Capture.m */,
+				1467E2D32044406C000D5E54 /* Video_Scale.h */,
+				1467E2D42044406C000D5E54 /* Video_Scale.m */,
+				1465B0442044EF51000687E0 /* Video_encoder.h */,
+				1465B0452044EF51000687E0 /* Video_encoder.m */,
 			);
 			path = VideoCapture;
 			sourceTree = "<group>";
@@ -2730,6 +2757,7 @@
 		14FDE9EF203FB33900FD5322 /* Video_code */ = {
 			isa = PBXGroup;
 			children = (
+				1465B0482044F445000687E0 /* Code_Configure */,
 				1467E2CC20439ECD000D5E54 /* Video_Decoder */,
 			);
 			path = Video_code;
@@ -2819,13 +2847,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1467E2D220443C4E000D5E54 /* Capture.m in Sources */,
+				1467E2D52044406C000D5E54 /* Video_Scale.m in Sources */,
 				14FDE9F3203FB34C00FD5322 /* VideoCapture.m in Sources */,
+				1465B04B2044F452000687E0 /* Code_Configure.m in Sources */,
 				14FDE9F7203FB37A00FD5322 /* Gst_Video_Capture.m in Sources */,
 				14FDEA4A203FF5E600FD5322 /* V_Capture_Device.m in Sources */,
 				14FDEA4F203FF7C000FD5322 /* S_Model.m in Sources */,
+				1465B0462044EF51000687E0 /* Video_encoder.m in Sources */,
 				14FDE9E6203FB2C500FD5322 /* main.m in Sources */,
 				1467E2CF20439ED8000D5E54 /* Video_Decoder.m in Sources */,
-				14FDE9DE203FB2C500FD5322 /* AppDelegate.mm in Sources */,
+				14FDE9DE203FB2C500FD5322 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
