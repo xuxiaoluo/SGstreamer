@@ -13,16 +13,20 @@ Mac 视频硬编码 vtench264hw 组件
 gst-launch 命令行
 
 视频采集、编码（x264enc）、写入本地（（cpu占用 72%））
+
 gst-launch-1.0 avfvideosrc ! video/x-raw, format='(string)'NV12, width=1280, height=720,framerate=30/1 ! x264enc byte-stream=true bframes=0 speed-preset=3 b-adapt=false b-pyramid=false dct8x8=true key-int-max=1000000 bitrate=2048 ! video/x-h264,format ='(string)'NV12,framerate=30/1,width= 1280, height=720,stream-format='(string)'byte-stream,profile= '(string)'high ! filesink location="/Users/sean/Desktop/gst_file/x264_enc.h264"
 //max-keyframe-interval=120 bitrate=400000 realtime=true
 
 
 vtench264hw 硬件编码 （cpu占用 6.7%）
 // realtime=true allow-frame-reordering=false
+
 gst-launch-1.0 avfvideosrc ! video/x-raw, format='(string)'NV12, width=1280, height=720,framerate=30/1 ! vtenc_h264_hw allow-frame-reordering=false realtime=true bitrate=2048 quality=1 ! video/x-h264,width= 1280, height=720,framerate=30/1 ! h264parse ! video/x-h264,stream-format='(string)'byte-stream ! capsfilter caps=video/x-h264,profile=high ! filesink location="/Users/sean/Desktop/gst_file/vt_enc.h264"
 
 软解码 (cpu 占用率 50% 左右)
+
 gst-launch-1.0 filesrc location="/Users/sean/Desktop/gst_file/gst_write720.h264" ! h264parse ! avdec_h264 ! videoconvert ! osxvideosink
 
 硬解码 (cpu 占用率24%)
+
 gst-launch-1.0 filesrc location="/Users/sean/Desktop/gst_file/gst_write720.h264" ! h264parse ! video/x-h264,stream-format=avc ! vtdec_hw ! videoconvert ! osxvideosink
