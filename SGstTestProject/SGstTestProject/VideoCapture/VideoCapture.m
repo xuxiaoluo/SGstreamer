@@ -14,6 +14,7 @@
 #include <gst/gst.h>
 #include "Capture.h"
 #include "Video_Scale.h"
+#include <gst/video/video.h>
 
 @interface VideoCapture ()
 @property (strong, nonatomic)  Gst_Video_Capture *gst_capt_vc;
@@ -38,30 +39,40 @@
 //    _decoder = [[Video_Decoder alloc] init];
     
     
+//    char *argv ="";
+//    gst_init(0, &argv);
     
     pipeline = gst_pipeline_new("pipeline");
-    
+
     GstElement *device = [Capture Capture_device];
     GstElement *device_filter = [Capture Capture_filterWith:30];
     
-    GstElement *scale = [Video_Scale Scale_element];
-    GstElement *scale_filter = [Video_Scale scale_filter:640 andHeight:360];
+    GstElement *video_sink = gst_element_factory_make("osxvideosink", NULL);
+    GstElement *convert = gst_element_factory_make("videoconvert", NULL);
     
-    gst_bin_add_many(GST_BIN(pipeline), device,device_filter,scale,scale_filter, nil);
-    gst_element_link_many(device, device_filter,scale,scale_filter, nil);
+    gst_bin_add_many(GST_BIN(pipeline), device,device_filter,convert,video_sink, nil);
     
-    
-    
-    for (int i = 0; i < 16; i ++) {
-        // 写本地文件
-        GstElement *local_file = gst_element_factory_make("filesink", NULL);
-//        g_object_set(G_OBJECT(local_file), "name","sevenlocalfile", nil);
-        g_object_set(G_OBJECT(local_file), "append",true, nil);
-        NSString *str = [NSString stringWithFormat:@"/Users/sean/Desktop/gst_file/gst_write%d.h264",i + 1];
-        g_object_set(G_OBJECT(local_file), "location",(const gchar *)[str UTF8String], nil);
-        gst_bin_add_many(GST_BIN(pipeline),local_file, nil);
+    if (!gst_element_link_many(device, device_filter,convert,video_sink, nil)) {
+        NSLog(@"gst 链接失败");
     }
+    
+
     gst_element_set_state(pipeline, GST_STATE_READY);
+    
+    
+    video_sink = gst_bin_get_by_interface(GST_BIN(pipeline), GST_TYPE_VIDEO_OVERLAY);
+    
+    
+    
+    if (!video_sink) {
+        GST_ERROR ("Could not retrieve video sink");
+        return;
+    }
+    gst_video_overlay_set_window_handle(GST_VIDEO_OVERLAY(video_sink), (guintptr) (id)_localView);
+    
+    if(gst_element_set_state(pipeline, GST_STATE_PLAYING) == GST_STATE_CHANGE_FAILURE) {
+        NSLog(@"Failed to set pipeline to start");
+    }
 }
 
 

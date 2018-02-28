@@ -13,21 +13,13 @@
 
 +(GstElement *)Capture_device{
     GstElement *input_device;
-    
-   
-    
     input_device  = gst_element_factory_make("avfvideosrc", "v_capture");
-    
     // 指定采集设备 设置采集参数
     g_object_set(G_OBJECT(input_device),"device-index", 0, NULL);
     g_object_set(G_OBJECT(input_device),"position", 0, NULL);
     g_object_set(G_OBJECT(input_device),"name","video_capture", NULL);
-    
     return input_device;
 
-//    gst_bin_add_many(GST_BIN(pipeline), input_device,filter, nil);
-//    gst_element_link_many(input_device, filter, nil);
-//    gst_element_set_state(pipeline, GST_STATE_READY);
 }
 
 +(GstElement *)Capture_filterWith:(int)frameRate{

@@ -133,7 +133,6 @@
     g_main_loop_unref (main_loop);
     main_loop = NULL;
     
-    
     /* Free resources */
     g_main_context_pop_thread_default(context);
     g_main_context_unref (context);
