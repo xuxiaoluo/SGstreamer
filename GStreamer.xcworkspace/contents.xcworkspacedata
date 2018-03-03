@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SGstTestProject/GST_Cap_Enc_file/GST_Cap_Enc_file.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SGstTestProject/SGstTestProject/SGstTestProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SGstTestProject/GST_Cap_Scale_Show/GST_Cap_Scale_Show.xcodeproj">
+   </FileRef>
+</Workspace>

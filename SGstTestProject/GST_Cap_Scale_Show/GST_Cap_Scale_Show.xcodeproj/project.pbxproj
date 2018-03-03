@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146ABC20204A40E900145F86 /* Video_Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 146ABC1C204A40E900145F86 /* Video_Scale.m */; };
+		146ABC21204A40E900145F86 /* Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 146ABC1F204A40E900145F86 /* Capture.m */; };
+		14A7850F20494CE40089C3B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A7850E20494CE40089C3B3 /* AppDelegate.m */; };
+		14A7851120494CE40089C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A7851020494CE40089C3B3 /* Assets.xcassets */; };
+		14A7851420494CE40089C3B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A7851220494CE40089C3B3 /* MainMenu.xib */; };
+		14A7851720494CE40089C3B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A7851620494CE40089C3B3 /* main.m */; };
+		14A78524204953F70089C3B3 /* GST_Cap_ShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A78522204953F70089C3B3 /* GST_Cap_ShowVC.m */; };
+		14A78525204953F70089C3B3 /* GST_Cap_ShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A78523204953F70089C3B3 /* GST_Cap_ShowVC.xib */; };
+		14EE7C93204957120058D65C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE7C92204957120058D65C /* AVFoundation.framework */; };
+		14EE7C952049572B0058D65C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE7C942049572B0058D65C /* CoreGraphics.framework */; };
+		14EE7C97204957310058D65C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE7C96204957310058D65C /* Foundation.framework */; };
+		14EE7C99204957450058D65C /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE7C98204957450058D65C /* libiconv.2.tbd */; };
+		14EE7C9B204957690058D65C /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE7C9A204957690058D65C /* GStreamer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		146ABC1B204A40E900145F86 /* Video_Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video_Scale.h; sourceTree = "<group>"; };
+		146ABC1C204A40E900145F86 /* Video_Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video_Scale.m; sourceTree = "<group>"; };
+		146ABC1E204A40E900145F86 /* Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Capture.h; sourceTree = "<group>"; };
+		146ABC1F204A40E900145F86 /* Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capture.m; sourceTree = "<group>"; };
+		14A7850A20494CE40089C3B3 /* GST_Cap_Scale_Show.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GST_Cap_Scale_Show.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A7850D20494CE40089C3B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		14A7850E20494CE40089C3B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14A7851020494CE40089C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14A7851320494CE40089C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		14A7851520494CE40089C3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A7851620494CE40089C3B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14A7851820494CE40089C3B3 /* GST_Cap_Scale_Show.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GST_Cap_Scale_Show.entitlements; sourceTree = "<group>"; };
+		14A78521204953F70089C3B3 /* GST_Cap_ShowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GST_Cap_ShowVC.h; sourceTree = "<group>"; };
+		14A78522204953F70089C3B3 /* GST_Cap_ShowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GST_Cap_ShowVC.m; sourceTree = "<group>"; };
+		14A78523204953F70089C3B3 /* GST_Cap_ShowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GST_Cap_ShowVC.xib; sourceTree = "<group>"; };
+		14EE7C902049570D0058D65C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		14EE7C92204957120058D65C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		14EE7C942049572B0058D65C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14EE7C96204957310058D65C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14EE7C98204957450058D65C /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		14EE7C9A204957690058D65C /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../../../../Library/Frameworks/GStreamer.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14A7850720494CE40089C3B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EE7C9B204957690058D65C /* GStreamer.framework in Frameworks */,
+				14EE7C99204957450058D65C /* libiconv.2.tbd in Frameworks */,
+				14EE7C97204957310058D65C /* Foundation.framework in Frameworks */,
+				14EE7C952049572B0058D65C /* CoreGraphics.framework in Frameworks */,
+				14EE7C93204957120058D65C /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146ABC1A204A40E900145F86 /* VideoScale */ = {
+			isa = PBXGroup;
+			children = (
+				146ABC1B204A40E900145F86 /* Video_Scale.h */,
+				146ABC1C204A40E900145F86 /* Video_Scale.m */,
+			);
+			name = VideoScale;
+			path = ../../SGstTestProject/SGstTestProject/VideoScale;
+			sourceTree = "<group>";
+		};
+		146ABC1D204A40E900145F86 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				146ABC1E204A40E900145F86 /* Capture.h */,
+				146ABC1F204A40E900145F86 /* Capture.m */,
+			);
+			name = Capture;
+			path = ../../SGstTestProject/SGstTestProject/Capture;
+			sourceTree = "<group>";
+		};
+		14A7850120494CE40089C3B3 = {
+			isa = PBXGroup;
+			children = (
+				14A7850C20494CE40089C3B3 /* GST_Cap_Scale_Show */,
+				14A7850B20494CE40089C3B3 /* Products */,
+				14EE7C8F2049570D0058D65C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14A7850B20494CE40089C3B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A7850A20494CE40089C3B3 /* GST_Cap_Scale_Show.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A7850C20494CE40089C3B3 /* GST_Cap_Scale_Show */ = {
+			isa = PBXGroup;
+			children = (
+				146ABC1D204A40E900145F86 /* Capture */,
+				146ABC1A204A40E900145F86 /* VideoScale */,
+				14A7850D20494CE40089C3B3 /* AppDelegate.h */,
+				14A7850E20494CE40089C3B3 /* AppDelegate.m */,
+				14A7851020494CE40089C3B3 /* Assets.xcassets */,
+				14A7851220494CE40089C3B3 /* MainMenu.xib */,
+				14A7851520494CE40089C3B3 /* Info.plist */,
+				14A7851620494CE40089C3B3 /* main.m */,
+				14A7851820494CE40089C3B3 /* GST_Cap_Scale_Show.entitlements */,
+				14A78521204953F70089C3B3 /* GST_Cap_ShowVC.h */,
+				14A78522204953F70089C3B3 /* GST_Cap_ShowVC.m */,
+				14A78523204953F70089C3B3 /* GST_Cap_ShowVC.xib */,
+			);
+			path = GST_Cap_Scale_Show;
+			sourceTree = "<group>";
+		};
+		14EE7C8F2049570D0058D65C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14EE7C9A204957690058D65C /* GStreamer.framework */,
+				14EE7C98204957450058D65C /* libiconv.2.tbd */,
+				14EE7C96204957310058D65C /* Foundation.framework */,
+				14EE7C942049572B0058D65C /* CoreGraphics.framework */,
+				14EE7C92204957120058D65C /* AVFoundation.framework */,
+				14EE7C902049570D0058D65C /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14A7850920494CE40089C3B3 /* GST_Cap_Scale_Show */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A7851B20494CE40089C3B3 /* Build configuration list for PBXNativeTarget "GST_Cap_Scale_Show" */;
+			buildPhases = (
+				14A7850620494CE40089C3B3 /* Sources */,
+				14A7850720494CE40089C3B3 /* Frameworks */,
+				14A7850820494CE40089C3B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GST_Cap_Scale_Show;
+			productName = GST_Cap_Scale_Show;
+			productReference = 14A7850A20494CE40089C3B3 /* GST_Cap_Scale_Show.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14A7850220494CE40089C3B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Sean;
+				TargetAttributes = {
+					14A7850920494CE40089C3B3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 14A7850520494CE40089C3B3 /* Build configuration list for PBXProject "GST_Cap_Scale_Show" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14A7850120494CE40089C3B3;
+			productRefGroup = 14A7850B20494CE40089C3B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14A7850920494CE40089C3B3 /* GST_Cap_Scale_Show */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14A7850820494CE40089C3B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A7851120494CE40089C3B3 /* Assets.xcassets in Resources */,
+				14A78525204953F70089C3B3 /* GST_Cap_ShowVC.xib in Resources */,
+				14A7851420494CE40089C3B3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14A7850620494CE40089C3B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A7851720494CE40089C3B3 /* main.m in Sources */,
+				14A78524204953F70089C3B3 /* GST_Cap_ShowVC.m in Sources */,
+				146ABC20204A40E900145F86 /* Video_Scale.m in Sources */,
+				146ABC21204A40E900145F86 /* Capture.m in Sources */,
+				14A7850F20494CE40089C3B3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14A7851220494CE40089C3B3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A7851320494CE40089C3B3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14A7851920494CE40089C3B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		14A7851A20494CE40089C3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		14A7851C20494CE40089C3B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GST_Cap_Scale_Show/GST_Cap_Scale_Show.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z8SE9YCY23;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Library/Frameworks/GStreamer.framework/Versions/Current,
+				);
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Headers,
+					/Library/Frameworks/GStreamer.framework/Headers,
+				);
+				INFOPLIST_FILE = GST_Cap_Scale_Show/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/GStreamer.framework/Versions/1.0/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = "sean.com.GST-Cap-Scale-Show";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14A7851D20494CE40089C3B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GST_Cap_Scale_Show/GST_Cap_Scale_Show.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z8SE9YCY23;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Library/Frameworks/GStreamer.framework/Versions/Current,
+				);
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Headers,
+					/Library/Frameworks/GStreamer.framework/Headers,
+				);
+				INFOPLIST_FILE = GST_Cap_Scale_Show/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/GStreamer.framework/Versions/1.0/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = "sean.com.GST-Cap-Scale-Show";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A7850520494CE40089C3B3 /* Build configuration list for PBXProject "GST_Cap_Scale_Show" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A7851920494CE40089C3B3 /* Debug */,
+				14A7851A20494CE40089C3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A7851B20494CE40089C3B3 /* Build configuration list for PBXNativeTarget "GST_Cap_Scale_Show" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A7851C20494CE40089C3B3 /* Debug */,
+				14A7851D20494CE40089C3B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14A7850220494CE40089C3B3 /* Project object */;
+}

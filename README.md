@@ -8,7 +8,6 @@
 * 解码 读文件（264文件）-》显示1路
 
 
-
 ###gst-launch 命令行
 
 * 视频采集
@@ -89,12 +88,8 @@
 		 video/x-raw,format=AYUV,width=200,height=200 ! \
 		 videobox border-alpha=0 top=-360 bottom=-10 left=-100 right=0 ! mix.
  
- 
- 
 
- 
- 
- * 混流本地264视频文件（左右显示）
+ * 混流本地264视频文件（左右显示） 
  
  // ! video/x-raw,format=AYUV,width=200,height=200 
  
